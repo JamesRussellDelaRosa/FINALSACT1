@@ -1,0 +1,116 @@
+<!DOCTYPE html> 
+<html> 
+   <head> 
+      <meta charset="UTF-8" /> 
+      <title>React Application</title> 
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.3/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="style.css">
+   </head> 
+   <body> 
+	  
+  <body>
+
+    <div id="header" ></div>
+	<div class="row">
+	<div id="content" class="col"></div>
+	</div>
+	<div id="footer"></div>
+
+    <script type="text/babel">
+      function Header() {
+        return 	<div class="row">        
+            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container px-4">
+                <a class="navbar-brand" href="#page-top"><i class="bi bi-house"></i>Home</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item"><a class="nav-link" href="#about"><i class="bi bi-person-badge"></i>About</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#explore"><i class="bi bi-briefcase"></i>Explore</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact"><i class="bi bi-person-lines-fill"></i>Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        </div>;
+      }
+	  function Content() {
+        return <div class="row">
+            <header class="text-white" id="page-top">
+            <div class="container px-4 text-center">
+                <h1 class="fw-bolder">Welcome to My Website</h1>
+                <p class="lead">This is a simple website that uses ReactJS and Bootstrap 5</p>
+                <a class="btn btn-lg btn-light" href="#about">Read more</a>
+            </div>
+        </header>
+
+        <section id="about" class="text-white">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>About this page</h2>
+                        <p class="lead">React.js is an open-source JavaScript library that is used for building user interfaces specifically for single-page applications. It’s used for handling the view layer for web and mobile apps. React also allows us to create reusable UI components.</p>
+                        <p class="lead">Bootstrap is the world’s most popular and widely used open-source framework for developing with HTML, CSS, and JS. It is a front end framework of HTML. Bootstrap helps in building responsive websites or web applications and a 12-column grid system that helps dynamically adjust the website to a suitable screen resolution.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="text-white" id="explore">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Explore</h2>
+                        <p class="lead"> You can do more by learning <a href="https://getbootstrap.com">Bootstrap</a> and <a href="https://reactjs.org/">ReactJS</a> by visiting this links.</p>
+                        <p class="lead">Build fast, responsive sites with Bootstrap Powerful, extensible, and feature-packed frontend toolkit. Build and customize with Sass, utilize prebuilt grid system and components, and bring projects to life with powerful JavaScript plugins.</p>
+                        <p class="lead">React makes it painless to create interactive UIs. Design simple views for each state in your application, and React will efficiently update and render just the right components when your data changes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="text-white">
+            <div class="container px-4">
+                <div class="row gx-4 justify-content-center">
+                    <div class="col-lg-8">
+                        <h2>Contact me in this details</h2>
+                        <p class="lead"><i class="bi bi-envelope"></i> delarosajamesrussell_bsit@plmun.edu.ph</p>
+                        <p class="lead"><i class="bi bi-instagram"></i> russell_delarosa200021</p>
+                        <h2>James Russell D. Dela Rosa IT2C</h2>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+            <button onClick={Display} id="btn1" type="button" class="btn btn-light">Click ME!</button>
+            </div>;
+      }
+	  function Footer() {
+        return <div class="row">
+        <footer class="py-5">
+            <div class="container px-4"><p class="m-0 text-center text-white">James Russell D. Dela Rosa IT2C Copyright &copy; 2022</p></div>
+        </footer>
+        </div>;
+      }
+	  
+	  function Display(){
+		alert("Button Clicked!");
+		$("#footer").html("You had click the button");
+	  }
+      ReactDOM.render(<Header />, document.getElementById('header'))
+	  ReactDOM.render(<Content />, document.getElementById('content'))
+	  ReactDOM.render(<Footer />, document.getElementById('footer'))
+    </script>
+	  
+	  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+	  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+      <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+	  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+   </body>  
+</html>
